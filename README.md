@@ -1,9 +1,43 @@
+Проект "Модерация постов"
+Демо-видео работы приложения можно посмотреть по ссылке: https://www.loom.com/share/9e6dee35a9384f40abc1c6f10f7d894d
+
+Основная информация
+Этот readme file содержи пошаговую инструкцию по сборке и запуску приложения.
+Данное руководство предполагает наличие установленного IDE и NodeJS (node package manager необходим для запуска и устанавливается вместе с NodeJS) .
+Реализация даного техническоо задания выполнени в 2х проектах: серверной и клиентской части.
+Серверная часть запускается на порте 5000, и слушает обращения к нему.
+
+Установка
+1) Для скачивания серверной части с имитацией API  необходимо пройти на гитхаб по адресу : https://github.com/kislyakovIlya/back2back_
+2) Для стягивания приложения на свой IDE необходимо нажать а зеленую кнопку (Code ) и скопировать адрес репозитория, и далее вставить ссылку в соответстующую адресную строку Вашего IDE
+(Например, для WebStorm, это будет распологаться во вкладке Git -> Clone -> (Вставляете заранее скопированный в предыдущем шаге URL) -> далее 'Clone"
+3) После завершения клонирования репозитория откройте проект, и, с помощью комманды 'npm install' установите пакеты из package.json
+4) Для запуска серверной части с коммандной строки введите 'npm start'
+
+5) Для скачивания клиентской части необходимо пройти на гитхаб по адресу : https://github.com/kislyakovIlya/post_moderation
+2) Для стягивания приложения на свой IDE необходимо так же нажать а зеленую кнопку (Code ) и скопировать адрес репозитория, и далее вставить ссылку в соответстующую адресную строку Вашего IDE
+(Например, для WebStorm, это будет распологаться во вкладке Git -> Clone -> (Вставляете заранее скопированный в предыдущем шаге URL) -> далее 'Clone"
+3) После завершения клонирования репозитория откройте проект, и, с помощью комманды 'npm install' установите пакеты из package.json
+4) Для запуска клиентской части с коммандной строки введите 'npm start'
+
+
+Работа с приложением:
+
+Сервер и клиент запускаются последовательно. При изначальном запуске клиента, пользователь увидит только заголовок в верхней части экрана с инструкциями. 
+При запущеном сервере, во время старта, клиент делает запрос GET на сервер, при нажатии на 'Enter' отображает пакет из первых 10 объектов, подгруженых с http://localhost:5000/cards. 
+Схема объектов строго повторяет предложеную в ТЗ. Кнопки принятия решений выбраны основываясь на наименовании принимаемого решения. Таким образом,
+ для того чтобы "Одобрить"(approve)- необходимо нажать "А" на английской раскладке, отклонить (disapprove)- "D", передать старшему модератеру(escalate)- "E".
+
+При отоброжении первого пакета 10 "постов", происходит фокусировка на первом "посте", и модератор может начинать принимать решения.
+При отработке пакета и нажатии "F7" происходит отправка решений на сервер и последующая загрузка нового пакета.
+
+ Спасибо за просмотр.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -31,40 +65,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
