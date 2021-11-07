@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,13 +15,77 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.flex-mini {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flex-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(71, 105, 104, 0.85);
+  padding-block-start: 2em;
+  padding-block-end: 2em;
+  padding-left: 3em;
+}
+
+.cardbody {
+  background-color: #f1f1f1;
+  width: 75%;
+  margin: 1px;
+  line-height: 55px;
+  font-size: 16px;
+  align-content: center;
+}
+
+.card-text {
+  font-size: medium;
+  text-space: 10;
+  all-space-treatment: 10px;
+}
+
+.focused {
+  border: 1px solid darkred;
+
+}
+.imagebody {
+  background-color: #f1f1f1;
+  width: 15%;
+  margin: 1px;
+  line-height: 55px;
+  font-size: 16px;
+  align-content: center;
+  align-self: center;
+
+}
+
+.info{
+  background-color: #f1f1f1;
+  width: 15%;
+  margin: 1px;
+  text-align: match-parent;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.owner{
+  align-content: flex-end;
+  justify-content: right;
+}
+
+.visibleClass {
+  visibility: visible;
+}
+.hideClass {
+  visibility: hidden;
 }
 
 .App-link {
